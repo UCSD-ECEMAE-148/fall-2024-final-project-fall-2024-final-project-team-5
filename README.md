@@ -1,7 +1,7 @@
 <div id="top"></div>
 
-<h1 align="center">TranquiBot: Chatgpt Powered Autonomous Car</h1>
-<h4 align="center">We let it choose that name</h4>
+<h1 align="center">PathFinder</h1>
+<h4 align="center">Follows and Adapts</h4>
 <!-- PROJECT LOGO -->:
 <br />
 <div align="center">
@@ -10,7 +10,7 @@
   </a>
 <h3>MAE148 Final Project</h3>
 <p>
-Team 8 Winter 2024
+Team 5 Fall 2024
 </p>
 
 ![image](https://github.com/JL2200/mae148_group8/blob/main/media/IMG_4898.JPG)
@@ -63,34 +63,33 @@ Team 8 Winter 2024
 ## Team Members
 
 <div align="center">
-    <p align = "center">Jesse, Jason, Maahir, and Alexander</p>
+    <p align = "center">Darren, Colby, and Guy</p>
 </div>
 
 <h4>Team Member Major and Class </h4>
 <ul>
-  <li>Jesse - Mechanical Engineering, Controls and Robotics - Class of 2026</li>
-  <li>Jason - Mechanical Engineering - Class of 2025</li>
-  <li>Maahir - Mechanical Engineering - Class of 2025</li>
-  <li>Alexander - Mechanical Engineering, Controls and Robotics - Class of 2025</li>
+  <li>Darren - Computer Engineering - Class of 2024</li>
+  <li>Colby - Mechanical Engineering, Controls and Robotics - Class of 2025</li>
+  <li>Guy - Mechanical Engineering, Controls and Robotics - Class of 2025</li>
 </ul>
 
 <!-- Final Project -->
 ## Final Project
-Our project goal was to integrate ChatGPT into the robocar framework. Using chatgpt, the robot can respond to input from the camera, lidar, and gps in order to do different moves and paths.
+Our project aimed to develop an autonomous RC car capable of following a lead car. The system adjusts speed dynamically, slowing down as the lead car approaches, accelerating as it moves further away, and mirroring its path to maintain seamless alignment.
 
 <!-- Original Goals -->
 ### Original Goals
-Originally, we envisioned a chatgpt robot in a classroom that students could command to do tasks. Our goalpost task was "go to the whiteboard and help the student solve the problem." This would require chatgpt to navigate a room, create a path to a whiteboard, solve visual math problems by identifying text on a board, and provide its usefulness to a student through good help. 
+Originally, we envisioned an autonomous RC car that could follow a lead car seamlessly, mimicking real-world vehicle behaviors. Our goalpost task was “follow the lead car while adjusting speed and direction dynamically.” This required programming the RC car to detect the lead car, adjust its speed to slow down when the lead car was closer, accelerate when it moved further away, and navigate turns by following the same path. Our ultimate aim was to demonstrate how autonomous systems can emulate safe and efficient driving behaviors.
 
 <!-- End Results -->
 ### Goals We Met
-We were succesfully able to communicate with the robot. We can ask chatgpt what it saw around it. Often chatgpt went into multiple paragraphs. One test we did was telling chat gpt to drive towards the hand with more fingers up. We held out our hand with 2 fingers to the left, and 4 fingers to the right. Chatgpt sent a drive command to turn towards the right. We also were able to generate decent paths with chatgpt; at one point we asked it to make a heart path and it followed the path pretty well. We feel that large language models open up many emergent capabilities for robots, and that our overall project of giving chatgpt a level of autonomy was a success. We feel that if we ran our original test, that chatgpt would do decently well, except for navigating around tables. Often times durring the debugging process we would just ask chatgpt what data it had. For example, when debugging lidar, we would ask it what it thought of the data format, what could be improved, and what reference data it wanted from the user. All in all, its linguistic capabilities were superb.
+We successfully developed an autonomous system capable of identifying and following a lead car. Using the OAK-D camera, we were able to detect the lead car and calculate its angle (left or right) relative to our autonomous car. This information was then fed into a LIDAR system to determine the precise distance between the two vehicles. By combining these inputs, our car adjusted its speed dynamically—slowing down as the lead car approached, speeding up as it moved further away, and turning to match the lead car's path. One test we conducted involved positioning the lead car at varying angles and distances. Our car consistently calculated the correct angle and distance, allowing it to smoothly adjust its trajectory and speed. This demonstrated a reliable ability to follow the lead car even during sharp turns or abrupt changes in speed. We feel this integration of camera-based object detection and LIDAR distance measurement was a significant achievement. The collaboration between these systems enabled our car to replicate human-like driving behaviors in a controlled environment. Overall, our project successfully met its goal of creating a car that could autonomously follow a lead vehicle with precision and adaptability.
 
 ### Future Goals
-#### Stretch Goal 1
+#### Future Goal 1
 We want to have chatgpt's path following trigger the manage.py drive command automatically so that chatgpt can navigate fully autonomous. We also want to have chatgpt only use one model instead of two seperated models. Finally, we want to turn the lidar data into a SLAM map and feed chatgpt an image map of its surroundings to generate better maps.
 
-#### Stretch Goal 2
+#### Future Goal 2
 We want automatic lidar stopping to be implemented for safety. Since chatgpt does not control the robot in real time, we need a way for the robot to stop if it is about to hit an object or person.
 
 ## Final Project Documentation
