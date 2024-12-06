@@ -13,7 +13,7 @@
 Team 5 Fall 2024
 </p>
 
-![image](https://github.com/JL2200/mae148_group8/blob/main/media/IMG_4898.JPG)
+![image]([https://github.com/JL2200/mae148_group8/blob/main/media/IMG_4898.JPG](https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/robocar1.jpg))
 </div>
 
 
