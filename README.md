@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://jacobsschool.ucsd.edu/">
-    <img src="/media/robocar1.jpg" alt="Logo" width="400" height="100">
+    <img src="/Media/" alt="Logo" width="400" height="100">
   </a>
 <h3>ECE/MAE148 Final Project</h3>
 <p>
