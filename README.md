@@ -104,9 +104,6 @@ We want automatic lidar stopping to be implemented for safety. Since chatgpt doe
 | Jetson Nano Case | <img src="/media/jetson%20nano%20case.png" /> | [Thingiverse](https://www.thingiverse.com/thing:3518410) |
 
 ### Software
-#### Chatgpt
-We connected Chatgpt to the robocar by using the Openai API, utilizing two seperate models. The first model was GPT4 with Vision, which processes commands from the user and images. Then this model creates an action plan for what the car can do. Since the image based models don't have function calling to trigger the drive commands, we used a second GPT4-Turbo model to read the vision models plan and turn those into functions. Chatgpt had acces to two functions, a drive command to control steering, speed, and motion timeout. Then it had control over a path function, which let chatgpt generate a csv path of x and y coordinates + a throttle for the car to follow. Chatgpt had access to the cameras, lidar data, gps data, and user prompts. We picked and chose which data to give Chatgpt based on the use case.
-
 #### Embedded Systems
 To run the system, we used a Jetson Nano with an Oakd depth camera, an ld06 lidar sensor, and a point one Fusion Engine gps. For motion we used a VESC Driver within the Donkey Car framework. https://www.donkeycar.com/
 
@@ -115,8 +112,6 @@ For commands, we made a ROS2 Node called ChatgptDriveSubpub that works with the 
 
 In our project files, we had to add the fusion engine driver for gps manually, so the nodes for fusion gps are prone to error. One will need 4 to 5 terminals to run this system. One for starting up gps, one for launching all_nodes, one for launching the chatgpt node, one for sending chatgpt messeges over a chat topic, and finally one to use donkeycar's manage.py drive command to drive the car in a desired path. 
 
-#### DonkeyCar AI
-For path following, we used the DonkeyCar AI framework and tuned our own PID values. With the donkey car framework, we connected through gps and used PID following of chatgpt generated waypoints for the car. Some example paths are in the donkey_paths folder. Often, chatgpt's paths were innacurate or straight lines, so you may have to be descriptive in your prompts to chatgpt. We found that the system worked best when chatgpt had a good reference understanding of its area size, how many path points to use, and that you want it to use funciton calling.
 
 ### How to Run
 Use the UCSD Robocar Docker images and add the projects folder yourself. Python3 is required, install any reposotries not there.
@@ -164,7 +159,7 @@ https://photos.google.com/u/0/share/AF1QipNbnRdItg1uGULNdo4saggAoKI3nbOa-YogXLWN
 
 <!-- Authors -->
 ## Authors
-Jason, Jesse, Maahir, Alexander
+Darren, Colby, and Guy
 
 ![image](https://github.com/UCSD-ECEMAE-148/winter-2024-team-2aka8/blob/main/media/148groupphoto.jpg)
 
@@ -172,13 +167,12 @@ Jason, Jesse, Maahir, Alexander
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 @@ -176,12 +176,10 @@
 ## Acknowledgments
-*Thank you to my teammates, Professor Jack Silberman, and our incredible TA Arjun Naageshwaran for an amazing Winter 2024 class! Thank you Kiersten for the amazing readme template.*
+*Thank you to my teammates, Professor Jack Silberman, and our incredible TAs Alexander and Winston for an amazing Fall 2024 class! Thank you Alexander for the amazing readme template.*
 
 ![image](https://github.com/UCSD-ECEMAE-148/winter-2024-team-2aka8/blob/main/media/148groupphoto.jpg)
 <!-- CONTACT -->
 ## Contact
 
-* Jason | yul202@ucsd.edu
-* Jesse | jerupe@ucsd.edu 
-* Maahir | masgharali@ucsd.edu
-* Alexander | ahaken@ucsd.edu
+* Darren | dwng@ucsd.edu
+* Colby | chettinger@ucsd.edu 
+* Guy | gvwalter@ucsd.edu
