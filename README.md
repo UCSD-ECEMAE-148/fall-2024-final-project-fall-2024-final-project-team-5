@@ -114,25 +114,44 @@ In our project files, we had to add the fusion engine driver for gps manually, s
 
 
 ### How to Run
-Use the UCSD Robocar Docker images and add the 3 folders yourself. Python3 is required.
+Use the UCSD Robocar Docker image (devel version) and add the camera_pkg and cruise_control folders yourself into the /home/projects/ros2_ws/src directory. The roboflow folder can be used to test the roboflow model on its own. Python3 is required.
 
-Step 1: Clone depthai repositories for use of OAK-D camera and roboflow.
-``` git clone https://github.com/luxonis/depthai.git && \
+Step 1: Clone depthai repositories for use of OAK-D camera and roboflow in the docker /home/projects directory.
+
+```
+    git clone https://github.com/luxonis/depthai.git && \
     git clone https://github.com/luxonis/depthai-python.git && \
     cd depthai && \
-    source ${VIRTUAL_ENV}/donkey/bin/activate && \
     curl -fL https://docs.luxonis.com/install_dependencies.sh | bash && \
     python3 install_requirements.py && \
     cd ../depthai-python/examples && \
-    python3 install_requirements.py ```
+    python3 install_requirements.py
+    echo "export OPENBLAS_CORETYPE=ARMV8" >> ~/.bashrc
+    echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | tee /etc/udev/rules.d/80-movidius.rules
+```
+Step 2: Implement the new packages for use with all_nodes.launch.py
+In ```gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_pkg_locations_ucsd.yaml``` add 
 
-Step 2: In the docker, first source ros2. 
+``` 
+camera_pkg: ["camera_pkg", "camera.launch.py"]
+cruise_control: ["cruise_control", "cruise_control.launch.py"]
+```
+In ```gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml``` add 
+
+```
+camera_pkg: 1
+cruise_control: 1
+```
+In ```gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml```
+Set vesc_without_odom and the lidar that you are using to 1.
+
+Step 3: In the docker, first source ros2. 
 
 ```source_ros2```
 
 ```build_ros2```
 
-```ros2 run fusion-engine-driver fusion_engine_ros_driver --ros-args -p connection_type:=tty -p tty_port:=/dev/ttyUSB1```
+```ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py```
 
 
 <!-- Authors -->
