@@ -146,7 +146,7 @@ Step 3: In the docker, first source ros2.
 ## Authors
 Darren, Colby, and Guy
 
-![image](https://github.com/UCSD-ECEMAE-148/winter-2024-team-2aka8/blob/main/media/148groupphoto.jpg)
+![image]((https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/groupphoto148.HEIC))
 
 <!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -154,7 +154,6 @@ Darren, Colby, and Guy
 ## Acknowledgments
 *Thank you to my teammates, Professor Jack Silberman, and our incredible TAs Alexander and Winston for an amazing Fall 2024 class! Thank you Alexander for the amazing readme template.*
 
-![image](https://github.com/UCSD-ECEMAE-148/winter-2024-team-2aka8/blob/main/media/148groupphoto.jpg)
 <!-- CONTACT -->
 ## Contact
 
