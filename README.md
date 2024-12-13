@@ -1,13 +1,5 @@
 <div id="top"></div>
 
-<h1 align="center">PathFinder</h1>
-<h4 align="center">Follows and Adapts</h4>
-<!-- PROJECT LOGO -->:
-<br />
-<div align="center">
-  <a href="https://jacobsschool.ucsd.edu/">
-    <img src="/Media/" alt="Logo" width="400" height="100">
-  </a>
 <h3>ECE/MAE148 Final Project</h3>
 <p>
 Team 5 Fall 2024
@@ -130,6 +122,7 @@ Step 1: Clone depthai repositories for use of OAK-D camera and roboflow in the d
     echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | tee /etc/udev/rules.d/80-movidius.rules
 ```
 Step 2: Implement the new packages for use with all_nodes.launch.py
+
 In ```gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_pkg_locations_ucsd.yaml``` add 
 
 ``` 
