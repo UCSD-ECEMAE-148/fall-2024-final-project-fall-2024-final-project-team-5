@@ -90,7 +90,7 @@ We want automatic lidar stopping to be implemented for safety. Since chatgpt doe
 
 ### Software
 #### Embedded Systems
-To run the system, we used a Jetson Nano with an Oakd depth camera, an ld06 lidar sensor, and a point one Fusion Engine gps. For motion we used a VESC Driver within the Donkey Car framework. https://www.donkeycar.com/
+To run the system, we used a Jetson Nano with an Oakd depth camera, an ld06 lidar sensor.
 
 #### ROS2
 For commands, we made a 2 ROS2 Packages called camera_pkg and cruise_control that work with the UCSD Robocar framework. 
