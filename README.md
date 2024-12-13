@@ -88,23 +88,16 @@ We want automatic lidar stopping to be implemented for safety. Since chatgpt doe
 
 ## Final Project Documentation
 
-<!-- Early Quarter -->
-### Robot Design CAD
-<img src="/media/full%20car%20cad.png" width="400" height="300" />
-
-#### Open Source Parts
-| Part | CAD Model | Source |
-|------|--------|-----------|
-| Jetson Nano Case | <img src="/media/jetson%20nano%20case.png" /> | [Thingiverse](https://www.thingiverse.com/thing:3518410) |
-
 ### Software
 #### Embedded Systems
 To run the system, we used a Jetson Nano with an Oakd depth camera, an ld06 lidar sensor, and a point one Fusion Engine gps. For motion we used a VESC Driver within the Donkey Car framework. https://www.donkeycar.com/
 
 #### ROS2
-For commands, we made a ROS2 Node called ChatgptDriveSubpub that works with the UCSD Robocar framework. Most of the files we created are in the basics2 package of the ros2_ws (ros2 workspace). We altered the nav2 config files to add the chatgpt node to start up automatically, but never finished this. So, if you follow the steps to get Ros2 running from the UCSD robocar framework, you are mostly complete.
+For commands, we made a 2 ROS2 Packages called camera_pkg and cruise_control that work with the UCSD Robocar framework. 
 
-In our project files, we had to add the fusion engine driver for gps manually, so the nodes for fusion gps are prone to error. One will need 4 to 5 terminals to run this system. One for starting up gps, one for launching all_nodes, one for launching the chatgpt node, one for sending chatgpt messeges over a chat topic, and finally one to use donkeycar's manage.py drive command to drive the car in a desired path. 
+The camera_pkg runs the roboflow model and uses the x-pixel offset to find the angle to the target. This is published to the /camera_data topic
+
+The cruise_control package sends Twist commands to the /cmd_vel topic to control the robot. It is subscribed to the /camera_data and /scan topics, and uses a PD controller to publish linear and angular velocities to the vesc topic. 
 
 
 ### How to Run
