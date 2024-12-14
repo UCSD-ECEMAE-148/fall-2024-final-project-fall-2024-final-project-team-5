@@ -146,9 +146,7 @@ Step 3: In the docker, first source ros2.
 ## Authors
 Darren, Colby, and Guy
 
-![image](https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/groupphoto148.HEIC)
-
-![image](https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/robocar1.jpg)
+![image](https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/groupphoto148.jpg)
 
 <!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
