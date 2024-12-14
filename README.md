@@ -10,49 +10,6 @@ Team 5 Fall 2024
 ![image](https://github.com/UCSD-ECEMAE-148/fall-2024-final-project-team-5/blob/main/Media/robocar1.jpg)
 </div>
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#team-members">Team Members</a></li>
-    <li><a href="#final-project">Final Project</a></li>
-      <ul>
-        <li><a href="#original-goals">Original Goals</a></li>
-          <ul>
-            <li><a href="#goals-we-met">Goals We Met</a></li>
-            <li><a href="#our-hopes-and-dreams">Our Hopes and Dreams</a></li>
-              <ul>
-                <li><a href="#stretch-goal-1">Stretch Goal 1</a></li>
-                <li><a href="#stretch-goal-2">Stretch Goal 2</a></li>
-              </ul>
-          </ul>
-        <li><a href="#final-project-documentation">Final Project Documentation</a></li>
-      </ul>
-    <li><a href="#robot-design">Robot Design </a></li>
-      <ul>
-        <li><a href="#cad-parts">CAD Parts</a></li>
-          <ul>
-            <li><a href="#final-assembly">Final Assembly</a></li>
-            <li><a href="#custom-designed-parts">Custom Designed Parts</a></li>
-            <li><a href="#open-source-parts">Open Source Parts</a></li>
-          </ul>
-        <li><a href="#electronic-hardware">Electronic Hardware</a></li>
-        <li><a href="#software">Software</a></li>
-          <ul>
-            <li><a href="#embedded-systems">Embedded Systems</a></li>
-            <li><a href="#ros2">ROS2</a></li>
-            <li><a href="#donkeycar-ai">DonkeyCar AI</a></li>
-          </ul>
-      </ul>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#authors">Authors</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
-
-
 <!-- TEAM MEMBERS -->
 ## Team Members
 
