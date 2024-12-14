@@ -38,10 +38,10 @@ We successfully developed an autonomous system capable of identifying and follow
 
 ### Future Goals
 #### Future Goal 1
-We want to have chatgpt's path following trigger the manage.py drive command automatically so that chatgpt can navigate fully autonomous. We also want to have chatgpt only use one model instead of two seperated models. Finally, we want to turn the lidar data into a SLAM map and feed chatgpt an image map of its surroundings to generate better maps.
+We aim to achieve a system where, as the speeds of both the lead car and the autonomous following car increase, the distance between them automatically adjusts to ensure a safe gap that provides sufficient space for braking. This behavior will enhance the safety and responsiveness of the autonomous following system, allowing it to adapt dynamically to varying driving conditions and ensure collision avoidance even at higher speeds.
 
 #### Future Goal 2
-We want automatic lidar stopping to be implemented for safety. Since chatgpt does not control the robot in real time, we need a way for the robot to stop if it is about to hit an object or person.
+We aim to integrate an emergency braking system utilizing our LiDAR. This system will automatically bring the car to a stop if an object comes too close, prioritizing safety for the vehicle and its surroundings.
 
 ## Final Project Documentation
 
